@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration with Table</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
 </head>
 <body class="bg-gray-100 p-8">
     <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -78,9 +79,26 @@
             </thead>
             <tbody id="studentTableBody">
                 <!-- Students will be added here dynamically -->
+
+                <tr>
+                    <td class="p-2 border">sndp bag</td>
+                    <td class="p-2 border">sndpbagg@gmail.com</td>
+                    <td class="p-2 border">23</td>
+                    <td class="p-2 border">Hacking</td>
+                    <td class="p-2 border text-center">
+                        <button 
+                            onclick="return confirm('hello')" 
+                            class="bg-red-500 text-white px-2 py-1 rounded"
+                        >
+                            Delete
+                        </button>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
         </div>
+
+       
 </body>
 </html>
