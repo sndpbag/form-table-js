@@ -36,5 +36,5 @@ This is a simple **Student Registration Form** built with **HTML, Tailwind CSS, 
 Feel free to fork the repository, make changes, and submit a pull request.
 
 ## 📧 Contact
-For any queries, reach out at **sndpbag4you@gmail.com**.
+For any queries, reach out at **sandipan735@gmail.com**.
 
