@@ -1,104 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration with Table</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="script.js"></script>
+
 </head>
+
 <body class="bg-gray-100 p-8">
     <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-    <!-- Form Section -->
-    <div class="bg-white p-6 rounded-lg shadow-md">
-        <h2 class="text-2xl font-bold mb-6 text-center">Student Registration</h2>
-        <form id="studentForm" class="space-y-4">
-            <div>
-                <label class="block mb-2">Name</label>
-                <input 
-                    type="text" 
-                    id="name" 
-                    class="w-full p-2 border rounded"
-                    required
-                >
-            </div>
-            <div>
-                <label class="block mb-2">Email</label>
-                <input 
-                    type="email" 
-                    id="email" 
-                    class="w-full p-2 border rounded"
-                    required
-                >
-            </div>
-            <div>
-                <label class="block mb-2">Age</label>
-                <input 
-                    type="number" 
-                    id="age" 
-                    class="w-full p-2 border rounded"
-                    required
-                >
-            </div>
-            <div>
-                <label class="block mb-2">Course</label>
-                <select 
-                    id="course" 
-                    class="w-full p-2 border rounded"
-                    required
-                >
-                    <option value="">Select Course</option>
-                    <option value="Computer Science">Computer Science</option>
-                    <option value="Mathematics">Mathematics</option>
-                    <option value="Physics">Physics</option>
-                    <option value="Chemistry">Chemistry</option>
-                </select>
-            </div>
-            <button 
-                type="submit" 
-                class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
-            >
-                Register Student
-            </button>
-        </form>
-    </div>
-
-
-       <!-- Table Section -->
-       <div class="bg-white p-6 rounded-lg shadow-md">
-        <h2 class="text-2xl font-bold mb-6 text-center">Student List</h2>
-        <table class="w-full" id="studentTable">
-            <thead>
-                <tr class="bg-gray-100">
-                    <th class="p-2 border">Name</th>
-                    <th class="p-2 border">Email</th>
-                    <th class="p-2 border">Age</th>
-                    <th class="p-2 border">Course</th>
-                    <th class="p-2 border">Actions</th>
-                </tr>
-            </thead>
-            <tbody id="studentTableBody">
-                <!-- Students will be added here dynamically -->
-
-                <tr>
-                    <td class="p-2 border">sndp bag</td>
-                    <td class="p-2 border">sndpbagg@gmail.com</td>
-                    <td class="p-2 border">23</td>
-                    <td class="p-2 border">Hacking</td>
-                    <td class="p-2 border text-center">
-                        <button 
-                            onclick="return confirm('hello')" 
-                            class="bg-red-500 text-white px-2 py-1 rounded"
-                        >
-                            Delete
-                        </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+        <!-- Form Section -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold mb-6 text-center">Student Registration</h2>
+            <form id="studentForm" class="space-y-4">
+                <div>
+                    <label class="block mb-2">Name</label>
+                    <input type="text" id="name" class="w-full p-2 border rounded" required>
+                </div>
+                <div>
+                    <label class="block mb-2">Email</label>
+                    <input type="email" id="email" class="w-full p-2 border rounded" required>
+                </div>
+                <div>
+                    <label class="block mb-2">Age</label>
+                    <input type="number" id="age" class="w-full p-2 border rounded" required>
+                </div>
+                <div>
+                    <label class="block mb-2">Course</label>
+                    <select id="course" class="w-full p-2 border rounded" required>
+                        <option value="">Select Course</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Mathematics">Mathematics</option>
+                        <option value="Physics">Physics</option>
+                        <option value="Chemistry">Chemistry</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
+                    Register Student
+                </button>
+            </form>
         </div>
 
-       
+
+        <!-- Table Section -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold mb-6 text-center">Student List</h2>
+            <table class="w-full" id="studentTable">
+                <thead>
+                    <tr class="bg-gray-100">
+                        <th class="p-2 border">Name</th>
+                        <th class="p-2 border">Email</th>
+                        <th class="p-2 border">Age</th>
+                        <th class="p-2 border">Course</th>
+                        <th class="p-2 border">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTableBody">
+                    <!-- Students will be added here dynamically -->
+                    <tr>
+                        <td class="p-2 border">sndp bag</td>
+                        <td class="p-2 border">sndpbagg@gmail.com</td>
+                        <td class="p-2 border">23</td>
+                        <td class="p-2 border">Hacking</td>
+                        <td class="p-2 border text-center">
+                            <button onclick="return confirm('Edit')" class="bg-yellow-500 text-white p-1 rounded hover:bg-yellow-600">Edit</button>
+                            <button 
+                                onclick="return confirm('Delete')" 
+                                class="bg-red-500 text-white px-2 py-1 rounded"
+                            >
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+      <!-- Edit Modal -->
+      <div id="editModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+        <div class="bg-white p-8 rounded-lg w-96">
+            <h2 class="text-2xl font-bold mb-6 text-center">Edit Student</h2>
+            <form id="editStudentForm" class="space-y-4">
+                <div>
+                    <label class="block mb-2">Name</label>
+                    <input 
+                        type="text" 
+                        id="editName" 
+                        class="w-full p-2 border rounded"
+                        required
+                    >
+                </div>
+                <div>
+                    <label class="block mb-2">Email</label>
+                    <input 
+                        type="email" 
+                        id="editEmail" 
+                        class="w-full p-2 border rounded"
+                        required
+                    >
+                </div>
+                <div>
+                    <label class="block mb-2">Age</label>
+                    <input 
+                        type="number" 
+                        id="editAge" 
+                        class="w-full p-2 border rounded"
+                        required
+                    >
+                </div>
+                <div>
+                    <label class="block mb-2">Course</label>
+                    <select 
+                        id="editCourse" 
+                        class="w-full p-2 border rounded"
+                        required
+                    >
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Mathematics">Mathematics</option>
+                        <option value="Physics">Physics</option>
+                        <option value="Chemistry">Chemistry</option>
+                    </select>
+                </div>
+                <div class="flex justify-between">
+                    <button 
+                        type="submit" 
+                        class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 w-full mr-2"
+                    >
+                        Update
+                    </button>
+                    <button 
+                        type="button" 
+                        id="cancelEditBtn" 
+                        class="bg-gray-300 text-black p-2 rounded hover:bg-gray-400 w-full"
+                    >
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Place your JavaScript at the end -->
+ 
 </body>
+
 </html>
